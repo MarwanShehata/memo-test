@@ -19,7 +19,7 @@ function MemoizeInnerRealPropsFixWithCallback() {
 	return (
 		<>
 			<p>
-				Memoize Inner with props passed like a simple string and a function but
+				5. Memoize Inner with props passed like a simple string and a function but
 				the function is inside a useCallback
 			</p>
 			<p style={{ color: 'green' }}>Memoization not broken again</p>

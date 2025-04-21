@@ -21,7 +21,7 @@ function MemoizeInnerRealPropsFixWithCallbackButWeAddedAnotherPropSoItBrokeSoAdd
 	return (
 		<>
 			<p>
-				The one before was broken again? Don't worry, just add more complexity
+				7. The one before was broken again? Don't worry, just add more complexity
 				by adding a useCallback for that other prop
 			</p>
 			<p style={{ color: 'green' }}>Memoization not broken again :/</p>

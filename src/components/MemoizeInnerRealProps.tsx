@@ -15,7 +15,7 @@ function MemoizeInnerRealProps() {
 
 	return (
 		<>
-			<p>Memoize Inner with props passed like a simple string and a function</p>
+			<p>4. Memoize Inner with props passed like a simple string and a function</p>
 			<p style={{ color: 'red' }}>Memoization broke</p>
 			<div
 				className={styles['basic-example']}

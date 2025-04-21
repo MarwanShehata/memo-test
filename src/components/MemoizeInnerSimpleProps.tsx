@@ -15,7 +15,7 @@ function MemoizeInnerSimpleProps() {
 
 	return (
 		<>
-			<p>Memoize Inner with props passed like a simple string</p>
+			<p>3. Memoize Inner with props passed like a simple string</p>
 			<p style={{ color: 'green' }}>Memoization works here too</p>
 			<div
 				className={styles['basic-example']}

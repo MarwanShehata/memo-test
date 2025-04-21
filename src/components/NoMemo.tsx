@@ -23,7 +23,7 @@ function NoMemo() {
 
 	return (
 		<>
-			<p>No memoization passed, just a single component with two states</p>
+			<p>1. No memoization passed, just a single component with two states</p>
 			<p style={{ color: 'red' }}>It's broken as you see</p>
 			<div
 				className={styles['basic-example']}

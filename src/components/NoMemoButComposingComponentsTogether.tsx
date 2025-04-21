@@ -30,8 +30,8 @@ const Outer = ({ children }: { children: React.ReactNode }) => {
 	return (
 		<>
 			<p>
-				Composing components together without any memo or useCallback (React is
-				very opinionated)
+				8. Composing components together without any memo or useCallback (React
+				is very opinionated)
 			</p>
 			<p style={{ color: 'green' }}>Memoization works here</p>
 			<div

@@ -15,7 +15,7 @@ function MemoizeInnerNoProps() {
 
 	return (
 		<>
-			<p>Memoize Inner with no props passed</p>
+			<p>2. Memoize Inner with no props passed</p>
 			<p style={{ color: 'green' }}>Memoization works here</p>
 			<div
 				className={styles['basic-example']}

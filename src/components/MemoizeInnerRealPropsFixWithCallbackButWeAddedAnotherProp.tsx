@@ -20,7 +20,7 @@ function MemoizeInnerRealPropsFixWithCallbackButWeAddedAnotherProp() {
 	}
 	return (
 		<>
-			<p>The one before was fixed? now let's add another prop</p>
+			<p>6. The one before was fixed? now let's add another prop</p>
 			<p style={{ color: 'red' }}>Memoization broken again</p>
 			<div
 				className={styles['basic-example']}
