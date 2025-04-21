@@ -1,13 +1,23 @@
 import './App.css'
-import BasicExample from './components/BasicExample'
-
+import MemoizeInnerNoProps from './components/MemoizeInnerNoProps'
+import MemoizeInnerRealProps from './components/MemoizeInnerRealProps'
+import MemoizeInnerRealPropsFixWithCallback from './components/MemoizeInnerRealPropsFixWithCallback'
+import MemoizeInnerRealPropsFixWithCallbackButWeAddedAnotherProp from './components/MemoizeInnerRealPropsFixWithCallbackButWeAddedAnotherProp'
+import MemoizeInnerRealPropsFixWithCallbackButWeAddedAnotherPropSoItBrokeSoAddMoreMemoization from './components/MemoizeInnerRealPropsFixWithCallbackButWeAddedAnotherPropSoItBrokeSoAddMoreMemoization'
+import MemoizeInnerSimpleProps from './components/MemoizeInnerSimpleProps'
+import NoMemo from './components/NoMemo'
 
 function App() {
-
-  return (
-			<>
-				<BasicExample />
-			</>
+	return (
+		<>
+			<NoMemo />
+			<MemoizeInnerNoProps />
+			<MemoizeInnerSimpleProps />
+			<MemoizeInnerRealProps />
+			<MemoizeInnerRealPropsFixWithCallback />
+			<MemoizeInnerRealPropsFixWithCallbackButWeAddedAnotherProp />
+			<MemoizeInnerRealPropsFixWithCallbackButWeAddedAnotherPropSoItBrokeSoAddMoreMemoization />
+		</>
 	)
 }
 
