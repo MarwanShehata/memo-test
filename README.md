@@ -1,54 +1,63 @@
-# React + TypeScript + Vite
+# React Memo Demystified
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A practical exploration of React's memoization patterns and component composition strategies for optimal performance. [Link](https://marwanshehata.gitlab.io/react-memo-test/): https://marwanshehata.gitlab.io/react-memo-test/
 
-Currently, two official plugins are available:
+## About This Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This repository contains a demonstration of different memoization approaches in React, showing common pitfalls and effective patterns. It accompanies a video discussion about React's component rendering optimization strategies.
 
-## Expanding the ESLint configuration
+## Key Concepts Explored
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Basic React rendering behavior without memoization
+- Using `React.memo()` for component optimization
+- How primitive vs non-primitive props affect memoization
+- The role of `useCallback` in preserving memoization
+- React's preferred component composition pattern
+- The growing complexity of maintaining memoization as components evolve
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Demo Components
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The project includes multiple examples that progressively demonstrate different memoization scenarios:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. **NoMemo**: Baseline example without any memoization
+2. **MemoizeInnerNoProps**: Simple memoized inner component with no props
+3. **MemoizeInnerSimpleProps**: Memoized component with primitive props (strings)
+4. **MemoizeInnerRealProps**: Memoized component with function props (and why it breaks)
+5. **MemoizeInnerRealPropsFixWithCallback**: Using `useCallback` to preserve memoization
+6. **MemoizeInnerRealPropsFixWithCallbackButWeAddedAnotherProp**: Showing how easy it is to break memoization again
+7. **MemoizeInnerRealPropsFixWithCallbackButWeAddedAnotherPropSoItBrokeSoAddMoreMemoization**: Fixing with more `useCallback` hooks (and more complexity)
+8. **NoMemoButComposingComponentsTogether**: React's preferred component composition pattern
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## Key Takeaways
+
+- Memoization with `React.memo()` only works if props don't change between renders
+- Non-primitive props (functions, objects, arrays) are recreated on each render unless memoized
+- Using `useCallback` and `useMemo` can preserve memoization but increases code complexity
+- React's recommended approach is to leverage component composition (children pattern) rather than over-relying on memoization
+- For more complex state management needs, consider state management libraries like Zustand
+
+## Getting Started
+
+1. Clone this repository
+2. Install dependencies with `npm install` or `yarn`
+3. Run the development server with `npm run dev` or `yarn dev`
+4. Experiment with the different examples to see memoization in action
+
+## Future Exploration
+
+- The React compiler (still in beta) may help automate memoization optimizations
+- Targeted state management with libraries like Zustand can provide more surgical updates
+
+## Resources
+
+For more information about React performance optimization:
+- [React Memo Documentation](https://react.dev/reference/react/memo)
+- [React useCallback Documentation](https://react.dev/reference/react/useCallback#skipping-re-rendering-of-components)
+
+## Contributing
+
+Contributions are welcome! Feel free to submit PRs with additional examples or clarifications.
+
+## License
+
+MIT
