@@ -6,6 +6,7 @@ import MemoizeInnerRealPropsFixWithCallbackButWeAddedAnotherProp from './compone
 import MemoizeInnerRealPropsFixWithCallbackButWeAddedAnotherPropSoItBrokeSoAddMoreMemoization from './components/MemoizeInnerRealPropsFixWithCallbackButWeAddedAnotherPropSoItBrokeSoAddMoreMemoization'
 import MemoizeInnerSimpleProps from './components/MemoizeInnerSimpleProps'
 import NoMemo from './components/NoMemo'
+import NoMemoButComposingComponentsTogether from './components/NoMemoButComposingComponentsTogether'
 
 function App() {
 	return (
@@ -17,6 +18,7 @@ function App() {
 			<MemoizeInnerRealPropsFixWithCallback />
 			<MemoizeInnerRealPropsFixWithCallbackButWeAddedAnotherProp />
 			<MemoizeInnerRealPropsFixWithCallbackButWeAddedAnotherPropSoItBrokeSoAddMoreMemoization />
+			<NoMemoButComposingComponentsTogether />
 		</>
 	)
 }
