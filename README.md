@@ -4,7 +4,7 @@ A practical exploration of React's memoization patterns and component compositio
 
 ## About This Project
 
-This repository contains a demonstration of different memoization approaches in React, showing common pitfalls and effective patterns. It accompanies a video discussion about React's component rendering optimization strategies.
+This repository contains a demonstration of different memoization approaches in React, showing common pitfalls and effective patterns.
 
 ## Key Concepts Explored
 
